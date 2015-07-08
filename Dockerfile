@@ -1,5 +1,5 @@
 FROM elasticsearch:latest
-AUTHOR shm <notyce@gmail.com>
+MAINTAINER shm <notyce@gmail.com>
 
 # Performance Tweaks
 RUN echo "* - nofile 65535" >> /etc/security/limits.conf && \
@@ -19,13 +19,8 @@ VOLUME /usr/share/elasticsearch/config
 
 
 # install ES plugins (marvel, kopf, head)
-RUN /usr/share/elasticsearch/bin/plugin -i elasticsearch/marvel/latest
-RUN /usr/share/elasticsearch/bin/plugin -i mobz/elasticsearch-head/latest
-RUN /usr/share/elasticsearch/bin/plugin -i lmenezes/elasticsearch-kopf/latest
-
-
-ENTRYPOINT ["/docker-entrypoint.sh"]
-
-EXPOSE 9200 9300
+RUN /usr/share/elasticsearch/bin/plugin -i elasticsearch/marvel/latest && \
+    /usr/share/elasticsearch/bin/plugin -i mobz/elasticsearch-head/latest && \
+    /usr/share/elasticsearch/bin/plugin -i lmenezes/elasticsearch-kopf/latest
 
 CMD ["elasticsearch"]
