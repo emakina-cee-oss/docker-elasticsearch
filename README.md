@@ -32,9 +32,14 @@ elasticsearch:
 
 As seen above, you can map specific volumes for your _data_ directory and your own elasticsearch config YML file.
 
-
-__NOTE__: Privileged is now required, this is because we're setting memlock unlimited to ensure optimum performance of ES.
+__NOTE__: privileged mode is required, because of performance optimizations (memlock unlimited). (Source:  [Hewlett-Packard-ESS/docker-elasticsearch][https://github.com/Hewlett-Packard-ESS/docker-elasticsearch])
  
+## Plugins
+The following elasticsearch plugins are installed in the image:
+- [marvel][https://www.elastic.co/products/marvel] 
+- [head][http://mobz.github.io/elasticsearch-head/]
+- [kopf][https://github.com/lmenezes/elasticsearch-kopf]
+
 ## Logging
 By default, only WARN and above will be visible in the stdout and subsequently docker logs.  INFO and above are logged to /storage/logs
 
