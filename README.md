@@ -1,6 +1,7 @@
 ## Info
 
 This container builds on the official elasticsearch image. Currently installing elasticsearch 1.6
+Available at [ddogs/elasticsearch](https://registry.hub.docker.com/u/ddogs/elasticsearch/)
 
 ## Use
 
