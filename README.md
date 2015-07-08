@@ -1,3 +1,5 @@
+## Info
+
 This container builds on the official elasticsearch image. Currently installing elasticsearch 1.6
 
 ## Use
@@ -13,7 +15,7 @@ docker run ddogs/elasticsearch -Des.node.name="awesome_node"
 ```
 
 
-Exmaple docker-compose file:
+Example docker-compose file:
 
 ```
 elasticsearch:
@@ -28,7 +30,7 @@ elasticsearch:
     - "9300:9300/tcp" 
 ```
 
-You can map specific  volumes for your _data_ directory and your own elasticsearch config file
+As seen above, you can map specific volumes for your _data_ directory and your own elasticsearch config YML file.
 
 
 __NOTE__: Privileged is now required, this is because we're setting memlock unlimited to ensure optimum performance of ES.
