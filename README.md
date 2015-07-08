@@ -35,8 +35,8 @@ As seen above, you can map specific volumes for your _data_ directory and your o
 __NOTE__: privileged mode is required, because of performance optimizations (memlock unlimited). (Source:  [Hewlett-Packard-ESS/docker-elasticsearch](https://github.com/Hewlett-Packard-ESS/docker-elasticsearch) 
 
 ## Cluster
-To start an elasticsearch cluster, you can use the cluster.yml file for docker-composer.
-It starts 3 elasticsearch data nodes and one client node.
+To start an elasticsearch cluster, you can use the cluster.yml file for docker-compose.
+It starts 3 elasticsearch data nodes and one client node. The ports 9200 and 9300 of the client-node are exposed.
 
 ## Plugins
 The following elasticsearch plugins are installed in the image:
