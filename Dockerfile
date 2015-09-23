@@ -1,4 +1,4 @@
-FROM elasticsearch:latest
+FROM elasticsearch:1.7.2
 MAINTAINER shm <notyce@gmail.com>
 
 # Performance Tweaks
