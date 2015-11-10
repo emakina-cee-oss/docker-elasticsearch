@@ -19,8 +19,8 @@ VOLUME /usr/share/elasticsearch/config
 
 
 # install ES plugins (marvel, kopf, head)
-RUN /usr/share/elasticsearch/bin/plugin -i elasticsearch/marvel/latest && \
-    /usr/share/elasticsearch/bin/plugin -i mobz/elasticsearch-head/latest && \
-    /usr/share/elasticsearch/bin/plugin -i lmenezes/elasticsearch-kopf/latest
+RUN /usr/share/elasticsearch/bin/plugin install elasticsearch/marvel/latest && \
+    /usr/share/elasticsearch/bin/plugin install mobz/elasticsearch-head/latest && \
+    /usr/share/elasticsearch/bin/plugin install lmenezes/elasticsearch-kopf/latest
 
 CMD ["elasticsearch"]
