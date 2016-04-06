@@ -20,6 +20,7 @@ VOLUME /usr/share/elasticsearch/config
 
 # install ES plugins (marvel, kopf, head)
 RUN /usr/share/elasticsearch/bin/plugin install mobz/elasticsearch-head/latest && \
-    /usr/share/elasticsearch/bin/plugin install lmenezes/elasticsearch-kopf/latest
+    /usr/share/elasticsearch/bin/plugin install lmenezes/elasticsearch-kopf/latest && \
+    /usr/share/elasticsearch/bin/plugin install delete-by-query
 
 CMD ["elasticsearch"]
