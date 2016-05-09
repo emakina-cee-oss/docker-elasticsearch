@@ -51,4 +51,4 @@ By default, only WARN and above will be visible in the stdout and subsequently d
 ## License
 This docker application is distributed unter the MIT License (MIT).
 
-Elasticsearch itself is licenced under the [Apache](https://github.com/elastic/elasticsearch/blob/master/LICENSE.txt) License.
+Elasticsearch itself is licensed under the [Apache](https://github.com/elastic/elasticsearch/blob/master/LICENSE.txt) License.
