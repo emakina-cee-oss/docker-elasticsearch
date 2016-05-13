@@ -1,4 +1,4 @@
-FROM elasticsearch:2.2.1
+FROM elasticsearch:2.3
 MAINTAINER shm <notyce@gmail.com>
 
 # Performance Tweaks
